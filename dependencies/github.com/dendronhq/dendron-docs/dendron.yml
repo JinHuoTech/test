@@ -1,0 +1,117 @@
+dev:
+    enablePreviewV2: true
+version: 5
+useTitleForLink: true
+commands:
+    lookup:
+        note:
+            selectionMode: extract
+            confirmVaultOnCreate: false
+            leaveTrace: false
+            bubbleUpCreateNew: true
+            vaultSelectionModeOnCreate: smart
+            fuzzThreshold: 0.2
+    randomNote: {}
+    insertNote:
+        initialValue: templates
+    insertNoteLink:
+        aliasMode: none
+        enableMultiSelect: false
+    insertNoteIndex:
+        enableMarker: false
+    copyNoteLink: {}
+workspace:
+    dendronVersion: 0.83.0
+    vaults:
+        -
+            fsPath: .
+            name: dendron.dendron.docs
+            selfContained: true
+    journal:
+        dailyDomain: daily
+        name: journal
+        dateFormat: y.MM.dd
+        addBehavior: childOfDomain
+    scratch:
+        name: scratch
+        dateFormat: y.MM.dd.HHmmss
+        addBehavior: asOwnDomain
+    graph:
+        zoomSpeed: 1
+    enableAutoCreateOnDefinition: false
+    enableXVaultWikiLink: false
+    enableRemoteVaultInit: true
+    workspaceVaultSyncMode: noCommit
+    enableAutoFoldFrontmatter: true
+    maxPreviewsCached: 10
+    maxNoteLength: 204800
+    task:
+        name: ''
+        dateFormat: ''
+        addBehavior: childOfCurrent
+        statusSymbols:
+            '': ' '
+            wip: w
+            done: x
+            assigned: a
+            moved: m
+            blocked: b
+            delegated: l
+            dropped: d
+            pending: 'y'
+        prioritySymbols:
+            H: high
+            M: medium
+            L: low
+        todoIntegration: false
+        createTaskSelectionType: selection2link
+    enableUserTags: true
+    enableHashTags: true
+    enableEditorDecorations: true
+preview:
+    enableFMTitle: true
+    enableNoteTitleForLink: true
+    enableMermaid: true
+    enablePrettyRefs: true
+    enableKatex: true
+    automaticallyShowPreview: false
+publishing:
+    enableFMTitle: true
+    enableNoteTitleForLink: true
+    enableMermaid: true
+    enablePrettyRefs: true
+    enableKatex: true
+    copyAssets: true
+    logoPath: notes/assets/images/logo.png
+    siteHierarchies:
+        - home
+        - dev
+        - pkg
+        - rfc
+        - topic
+    enableSiteLastModified: true
+    siteRootDir: docs
+    siteUrl: 'https://docs.dendron.so'
+    enableFrontmatterTags: true
+    enableHashesForFMTags: false
+    enableRandomlyColoredTags: true
+    duplicateNoteBehavior:
+        action: useVault
+        payload:
+            - vault
+    writeStubs: false
+    seo:
+        title: Dendron
+        description: >-
+            Dendron is a local-first, markdown based, hierarchical note taking
+            tool. It is meant to help you create, organize, and collaborate on
+            knowledge bases of any size.
+        author: dendronhq
+        twitter: dendronhq
+    github:
+        enableEditLink: true
+        editLinkText: Edit this page on GitHub
+        editBranch: main
+        editViewMode: tree
+        editRepository: 'https://github.com/dendronhq/dendron-docs'
+    enablePrettyLinks: true
